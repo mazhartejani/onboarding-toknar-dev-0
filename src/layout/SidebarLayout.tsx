@@ -2,6 +2,7 @@ import { Drawer, List, ListItemButton, ListItemText, Toolbar, Box, Typography } 
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import theme from '../styles/theme';
 import { Footer } from '../components';
+import type React from 'react';
 
 const menuItems = [
   { text: 'Company Profile', route: '/company-profile' },
@@ -11,7 +12,7 @@ const menuItems = [
   { text: 'Logout', route: '/login' },
 ];
 
-const SidebarLayout = () => {
+const SidebarLayout: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -49,7 +50,7 @@ const SidebarLayout = () => {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1}}>
+      <Box component="main" sx={{ flexGrow: 1, minHeight: '100vh', backgroundColor: theme.palette.background.default }}>
         <Toolbar 
             sx={{
                 backgroundColor: theme.palette.secondary.main,

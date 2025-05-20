@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router';
 import React from 'react';
 import theme from '../../styles/theme';
 
-export default function Login() {
+const Login: React.FC = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -126,3 +126,5 @@ export default function Login() {
     </Grid>
   );
 }
+
+export default Login;

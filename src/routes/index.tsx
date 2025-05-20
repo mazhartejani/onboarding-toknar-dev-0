@@ -4,12 +4,10 @@ import NotFoundScreen from "../screens/not-found/NotFound";
 import Login from "../screens/login/Login";
 import UserProfile from "../screens/UserPofile";
 import SidebarLayout from "../layout/SidebarLayout";
-// import Home from "../screens/home/Home";
+import Documents from "../screens/documents/Documents";
+import BankingInformation from "../screens/banking-information/BankingInformation";
 
-// import Documents from "../screens/documents/Documents";
-// import BankingInformation from "../screens/banking-information/BankingInformation";
 // import CompanyProfile from "../screens/profiles/CompanyProfile";
-// import UserProfile from "../screens/profiles/UserPofile";
 
 const MainRoutes = () => {
   return (
@@ -17,9 +15,9 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
           <Route element={<SidebarLayout />}>
-            {/* <Route index element={<CompanyProfile />} />
-            <Route path="banking-info" element={<BankingInfo />} />
-            <Route path="documents" element={<Documents />} /> */}
+            {/* <Route index element={<CompanyProfile />} />*/}
+            <Route path="banking-info" element={<BankingInformation />} />
+            <Route path="documents" element={<Documents />} /> 
             <Route path="/user-profile" element={<UserProfile />} />
             <Route path="*" element={<NotFoundScreen />} />
           </Route>

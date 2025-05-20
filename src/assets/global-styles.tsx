@@ -1,9 +1,8 @@
-
 export const styles = {
   root: {
     padding: "60px 0px",
     backgroundColor: "#eff6f9",
-    height: "100%",
+    minHeight: "100vh",
   },
   innerContainer: {
     margin: "20px 0",
@@ -72,5 +71,27 @@ export const styles = {
   esgFieldLabel: {
     fontSize: "14px",
     marginRight: "5px",
+  },
+
+  sectionTitle: {
+    color: "#444444 !important",
+    fontFamily: '"Roboto Slab", Sans-serif !important',
+    fontWeight: "700 !important",
+    fontSize: "1.125rem !important",
+  },
+  sectionSubtitle: {
+    fontSize: "0.75rem",
+    color: "#666666",
+    fontWeight: "normal",
+    marginBottom: "1rem !important",
+  },
+  inputRow: {
+    display: "flex",
+    gap: "1rem",
+    marginBottom: "1rem",
+  },
+  required: {
+    color: "red",
+    fontWeight: "bold",
   },
 };

@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { CloudUpload, HighlightOff } from '@mui/icons-material';
 import { Box, Button, Typography } from '@mui/material';
 import {useDropzone} from 'react-dropzone';
+import theme from '../../styles/theme';
 
 const FileUpload = () => {
     const [myFiles, setMyFiles] = useState<File[]>([])
@@ -46,8 +47,8 @@ const FileUpload = () => {
                 <CloudUpload sx={styles.icon}/>
             </Box>
             <Box sx={styles.right}>
-                <Typography sx={{fontSize: '12px'}}>Drag and drop files here.</Typography>
-                <Typography sx={{fontSize: '14px'}}>Maximum upload size: 10MB.</Typography>
+                <Typography sx={{fontSize: '12px', color: theme.palette.text.primary}}>Drag and drop files here.</Typography>
+                <Typography sx={{fontSize: '14px', color: theme.palette.text.primary}}>Maximum upload size: 10MB.</Typography>
             </Box>
             {
                 acceptedFiles.length > 0 &&
