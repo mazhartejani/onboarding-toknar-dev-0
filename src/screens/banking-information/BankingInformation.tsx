@@ -104,6 +104,7 @@ const BankingInformation: React.FC = () => {
                 value={form.bankName}
                 onChange={(e) => handleChange("bankName", e.target.value)}
                 onBlur={handleBlur("bankName")}
+                sx={styles.formField}
               />
               {bankNameError && (
                 <FormHelperText error>{bankNameError}</FormHelperText>
@@ -122,6 +123,7 @@ const BankingInformation: React.FC = () => {
                 value={form.accountNumber}
                 onChange={(e) => handleChange("accountNumber", e.target.value)}
                 onBlur={handleBlur("accountNumber")}
+                sx={styles.formField}
               />
               {accountNumberError && (
                 <FormHelperText error>{accountNumberError}</FormHelperText>
@@ -140,6 +142,7 @@ const BankingInformation: React.FC = () => {
                 id="demo-simple-select"
                 value={form.accountType}
                 onChange={(e) => handleChange("accountType", e.target.value as AccountType)}
+                sx={styles.formField}
               >
                 <MenuItem value="current">Current</MenuItem>
                 <MenuItem value="saving">Saving</MenuItem>
@@ -158,6 +161,7 @@ const BankingInformation: React.FC = () => {
                 value={form.sortCode}
                 onChange={(e) => handleChange("sortCode", e.target.value)}
                 onBlur={handleBlur("sortCode")}
+                sx={styles.formField}
               />
               {sortCodeError && (
                 <FormHelperText error>{sortCodeError}</FormHelperText>

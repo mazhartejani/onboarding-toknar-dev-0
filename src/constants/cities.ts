@@ -1,0 +1,1 @@
+export const cities: string[] = ["Select City", "London", "Paris", "New York"];

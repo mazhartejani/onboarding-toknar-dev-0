@@ -6,8 +6,7 @@ import UserProfile from "../screens/UserPofile";
 import SidebarLayout from "../layout/SidebarLayout";
 import Documents from "../screens/documents/Documents";
 import BankingInformation from "../screens/banking-information/BankingInformation";
-
-// import CompanyProfile from "../screens/profiles/CompanyProfile";
+import CompanyProfile from "../screens/company-profile";
 
 const MainRoutes = () => {
   return (
@@ -15,10 +14,10 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
           <Route element={<SidebarLayout />}>
-            {/* <Route index element={<CompanyProfile />} />*/}
+            <Route path="company-profile" element={<CompanyProfile />} />
             <Route path="banking-info" element={<BankingInformation />} />
             <Route path="documents" element={<Documents />} /> 
-            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="user-profile" element={<UserProfile />} />
             <Route path="*" element={<NotFoundScreen />} />
           </Route>
       </Routes>
