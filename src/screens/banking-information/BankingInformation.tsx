@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { styles } from "../../assets/global-styles";
 import { saveFormToFile } from "../../helper/helper";
+import theme from "../../styles/theme";
 
 type AccountType = "current" | "saving";
 
@@ -174,6 +175,12 @@ const BankingInformation: React.FC = () => {
             variant="contained"
             color="primary"
             size="large"
+            sx={{
+              mt: 4,
+              textTransform: "none",
+              backgroundColor: theme.palette.secondary.main,
+              ml: 1,
+            }}
             onClick={handleSave}
           >
             Save

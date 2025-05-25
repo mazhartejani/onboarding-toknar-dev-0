@@ -7,6 +7,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import FormHelperText from "@mui/material/FormHelperText";
 import { styles } from "../../../../assets/global-styles";
 import theme from "../../../../styles/theme";
+import { validateEmail, validatePhone } from "../../../../helper/helper";
 
 interface VerificationContactDetailsFormProps {
   form: {
@@ -15,12 +16,6 @@ interface VerificationContactDetailsFormProps {
   };
   handleChange: (field: "businessEmail" | "phone", value: string) => void;
 }
-
-const validateEmail = (email: string) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-const validatePhone = (phone: string) =>
-  /^\+?\d{7,15}$/.test(phone.replace(/\s/g, ""));
 
 const VerificationContactDetailsForm: React.FC<VerificationContactDetailsFormProps> = ({
   form,

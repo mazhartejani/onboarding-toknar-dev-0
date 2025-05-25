@@ -47,7 +47,7 @@ const UserProfile: React.FC = () => {
             <Stepper activeStep={activeStep} alternativeLabel>
               {steps.map((item, index) => (
                 <Step key={item.label} onClick={() => setActiveStep(index)}>
-                                    <StepLabel
+                  <StepLabel
                     sx={{
                       "& .MuiStepLabel-label": {
                         color: activeStep === index ? theme.palette.primary.main : "#b4b4b9",

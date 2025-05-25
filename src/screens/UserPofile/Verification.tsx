@@ -122,7 +122,7 @@ const Verification: React.FC<StepperProps> = ({ activeStep, handleBtnClick }) =>
           sx={{
             mt: 4,
             textTransform: "none",
-            backgroundColor: "#1e73be",
+            backgroundColor: theme.palette.secondary.main,
             ml: 1,
           }}
           onClick={() => handleBtnClick(activeStep - 1)}
@@ -138,7 +138,7 @@ const Verification: React.FC<StepperProps> = ({ activeStep, handleBtnClick }) =>
           sx={{
             mt: 4,
             textTransform: "none",
-            backgroundColor: "#1e73be",
+            backgroundColor: theme.palette.secondary.main,
             ml: 1,
           }}
           disabled={!form.isAuthorized}

@@ -6,6 +6,7 @@ import { Dayjs } from "dayjs";
 import PersonalInformationPIForm from "../../components/Forms/UserProfile/PersonalInformation/PersonalInformationPIForm";
 import PersonalInformationAddressForm from "../../components/Forms/UserProfile/PersonalInformation/PersonalInformationAddressForm";
 import { saveFormToFile } from "../../helper/helper";
+import theme from "../../styles/theme";
 
 interface StepperProps {
   activeStep: number;
@@ -66,9 +67,15 @@ const PersonalInformation: React.FC<StepperProps> = ({ activeStep, handleBtnClic
 
       <Box display="flex" justifyContent="flex-end" gap={2}>
         <Button
-          variant="outlined"
-          color="secondary"
-          sx={{ mt: 4, textTransform: "none" }}
+          variant="contained"
+          color="primary"
+          size="large"
+          sx={{
+            mt: 4,
+            textTransform: "none",
+            backgroundColor: theme.palette.secondary.main,
+            ml: 1,
+          }}
           onClick={() => saveFormToFile(form, "UserProfile01.json")}
         >
           Save
@@ -78,7 +85,7 @@ const PersonalInformation: React.FC<StepperProps> = ({ activeStep, handleBtnClic
           variant="contained"
           color="primary"
           size="large"
-          sx={{ mt: 4, textTransform: "none", backgroundColor: "#1e73be", ml: 1 }}
+          sx={{ mt: 4, textTransform: "none", backgroundColor: theme.palette.secondary.main, ml: 1 }}
           onClick={() => handleBtnClick(activeStep + 1)}
         >
           Verification

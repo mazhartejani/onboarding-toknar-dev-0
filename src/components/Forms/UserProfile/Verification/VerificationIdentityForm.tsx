@@ -14,6 +14,7 @@ import { FileUpload } from "../../../../components";
 import { styles } from "../../../../assets/global-styles";
 import { Dayjs } from "dayjs";
 import theme from "../../../../styles/theme";
+import { validateCountry, validateDate, validateDocumentNumber } from "../../../../helper/helper";
 
 type DocumentType = "Passport" | "Driving License";
 
@@ -29,10 +30,6 @@ interface VerificationIdentityBlockProps {
   form: VerificationInfo;
   handleChange: (field: keyof VerificationInfo, value: string | Dayjs | null) => void;
 }
-
-const validateDocumentNumber = (num: string) => num.trim().length > 4;
-const validateCountry = (country: string) => !!country;
-const validateDate = (date: Dayjs | null) => !!date && date.isValid();
 
 const VerificationIdentityForm: React.FC<VerificationIdentityBlockProps> = ({
   form,
