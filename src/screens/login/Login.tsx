@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router';
 import React from 'react';
 import theme from '../../styles/theme';
-
+import invoixLogo from '../../assets/invoix.png';
 const Login: React.FC = () => {
   const navigate = useNavigate();
 
@@ -42,13 +42,16 @@ const Login: React.FC = () => {
         }}
       >
         <Box
-          component="img"
           sx={{
-            width: 'fit-content',
-            pb: 4,
+            alignSelf: 'center',
+            mb: 4,
+            width: '100%',
           }}
-          src="https://seller01.invoix.io/wp-content/uploads/2022/12/Invoix-Logo.png"
-        />
+        >
+          <Typography variant="h1" sx={{ color: theme.palette.secondary.main }}>
+            Invoix <sup>TM</sup>
+          </Typography>
+        </Box>
         <Typography component="h1" variant="h4" sx={{ color: theme.palette.primary.contrastText }}>
           Your Marketplace for
         </Typography>
@@ -60,8 +63,9 @@ const Login: React.FC = () => {
           sx={{
             alignSelf: 'center',
             mt: 8,
+            width: '100%',
           }}
-          src="https://seller01.invoix.io/wp-content/uploads/2022/12/Invoix_marketplace-for-invoice-factoring_3.svg"
+          src={invoixLogo}
         />
       </Grid>
 

@@ -11,6 +11,7 @@ import { styles } from "../../../../assets/global-styles";
 import { Dayjs } from "dayjs";
 import { Box } from "@mui/material";
 import theme from "../../../../styles/theme";
+import { validateAddress1, validateCity, validateCountry, validatePostalCode } from "../../../../helper/helper";
 
 interface PersonalInfo {
   address1: string;
@@ -24,11 +25,6 @@ interface PersonalInformationAddressFormProps {
   form: PersonalInfo;
   handleChange: (field: keyof PersonalInfo, value: string | Dayjs | null) => void;
 }
-
-const validateAddress1 = (address: string) => address.trim().length > 2;
-const validatePostalCode = (postal: string) => postal.trim().length > 2;
-const validateCity = (city: string) => /^[a-zA-Z]{2,}$/.test(city.trim());
-const validateCountry = (country: string) => !!country;
 
 const PersonalInformationAddressForm: React.FC<PersonalInformationAddressFormProps> = ({ form, handleChange }) => {
   const [touched, setTouched] = useState({

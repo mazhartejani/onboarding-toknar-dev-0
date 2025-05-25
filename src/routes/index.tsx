@@ -12,6 +12,7 @@ const MainRoutes = () => {
   return (
     <Router basename="/">
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
           <Route element={<SidebarLayout />}>
             <Route path="company-profile" element={<CompanyProfile />} />

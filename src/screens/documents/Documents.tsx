@@ -3,6 +3,7 @@ import { Button, Container, Typography, Box } from "@mui/material";
 import { SimCardDownload } from "@mui/icons-material";
 import { FileUpload } from "../../components";
 import { styles } from "../../assets/global-styles";
+import theme from "../../styles/theme";
 
 const Documents: React.FC = () => {
   return (
@@ -55,7 +56,16 @@ const Documents: React.FC = () => {
 
           <Box sx={{ mt: 2 }}>
             {/* Save and reset button */}
-            <Button variant="contained" color="primary" size="large" sx={{ mr: 2 }}>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{
+                textTransform: "none",
+                backgroundColor: theme.palette.secondary.main,
+                ml: 1,
+              }}
+            >
               Save
             </Button>
             <Button variant="text" color="error" size="large">

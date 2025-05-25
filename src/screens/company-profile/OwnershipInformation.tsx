@@ -8,6 +8,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
 import { Button } from "@mui/material";
+import theme from "../../styles/theme";
 
 interface StepperProps {
   formData: any;
@@ -64,7 +65,12 @@ const OwnershipInformation = ({ formData, setFormData }: StepperProps) => {
           variant="contained"
           color="primary"
           size="large"
-          sx={{ mt: 4, textTransform: "none", backgroundColor: "#1e73be" }}
+          sx={{
+            mt: 4,
+            textTransform: "none",
+            backgroundColor: theme.palette.secondary.main,
+            ml: 1,
+          }}
           onClick={() =>
             setFormData({ ...formData, activeStep: formData.activeStep - 1 })
           }
@@ -80,7 +86,7 @@ const OwnershipInformation = ({ formData, setFormData }: StepperProps) => {
           sx={{
             mt: 4,
             textTransform: "none",
-            backgroundColor: "#1e73be",
+            backgroundColor: theme.palette.secondary.main,
             ml: 1,
           }}
           onClick={() =>

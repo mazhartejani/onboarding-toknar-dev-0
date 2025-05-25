@@ -14,6 +14,7 @@ import { styles } from "../../../../assets/global-styles";
 import { Dayjs } from "dayjs";
 import { Box } from "@mui/material";
 import theme from "../../../../styles/theme";
+import { validateCountry, validateDate, validateDepartment, validateInsurance, validateJobTitle, validateName } from "../../../../helper/helper";
 
 interface PersonalInfo {
   firstName: string;
@@ -29,14 +30,6 @@ interface PersonalInformationPIFormProps {
   form: PersonalInfo;
   handleChange: (field: keyof PersonalInfo, value: string | Dayjs | null) => void;
 }
-
-// validation functions
-const validateName = (name: string) => /^[a-zA-Z]{2,}$/.test(name.trim());
-const validateDate = (date: Dayjs | null) => !!date && date.isValid();
-const validateCountry = (country: string) => !!country;
-const validateJobTitle = (job: string) => job.trim().length > 1;
-const validateDepartment = (dep: string) => dep.trim().length > 1;
-const validateInsurance = (ins: string) => ins.trim().length > 4;
 
 const PersonalInformationPIForm: React.FC<PersonalInformationPIFormProps> = ({ form, handleChange }) => {
   const [touched, setTouched] = useState({
